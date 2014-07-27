@@ -1,0 +1,55 @@
+table {
+	font-size: 11pt;
+}
+
+tr {
+	height: 31px;
+}
+
+.hid {
+	color: #FF0000;
+	font-size: 11pt;
+	display: none;
+}
+
+th.nar {
+	width: 40px;
+}
+
+th.mid {
+	width: 70px;
+}
+
+th.wide {
+	width: 90px;
+}
+
+th.wider {
+	width: 140px;
+}
+
+th.widest {
+	width: 200px;
+}
+
+#pageNumSelect {
+	width: 50px;
+}
+
+div#pageInfo {
+	position: relative;
+}
+
+div.link {
+	position: absolute;
+	top: 0;
+	right: 20px;
+}
+
+td.handle img {
+  border-right: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+	cursor: pointer;
+}

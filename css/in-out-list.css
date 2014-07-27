@@ -1,0 +1,18 @@
+div.content {
+	width: 660px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.monthSelectDiv{
+  position: absolute;
+  top: 52px;
+  right: 180px;
+  background-color: #EAF2FF;
+  padding: 2px 5px;
+  z-index: 1;
+}
+
+input#year{
+  width: 40px;
+}
