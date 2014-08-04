@@ -20,6 +20,9 @@
     {/section}
          </select>
     &nbsp;&nbsp;
+    创建者：
+    {include file="user-select.tpl"}
+    &nbsp;&nbsp;
     <button id="changeMonthOk">确定</button>
   </div>
   {include file="pagination-table.tpl"}

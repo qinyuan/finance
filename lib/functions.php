@@ -121,4 +121,11 @@ function smarty_load_company(&$smarty) {
   $companies = select_companies();
   $smarty -> assign('companies', $companies);
 }
+
+function smarty_load_user_select(&$smarty, InOutFactory $factory) {
+  global $user;
+  $users = select_users_by_company($user['company']);
+  $smarty -> assign('users', $users);
+  $smarty -> assign('filterUserId' , $factory -> getFilterUser());
+}
 ?>

@@ -6,5 +6,9 @@ function change_month(InOutFactory &$income_factory) {
     $income_factory -> setMonth($month);
     $income_factory -> setYear($year);
   }
+  if (isset($_GET['user'])) {
+    $userId = intval($_GET['user']);
+    $income_factory -> setFilterUser($userId);
+  }
 }
 ?>

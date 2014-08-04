@@ -7,7 +7,7 @@ div.content {
 div.monthSelectDiv{
   position: absolute;
   top: 52px;
-  right: 180px;
+  right: 110px;
   background-color: #EAF2FF;
   padding: 2px 5px;
   z-index: 1;

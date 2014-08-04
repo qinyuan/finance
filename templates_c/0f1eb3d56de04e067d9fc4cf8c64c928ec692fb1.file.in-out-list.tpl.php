@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.16, created on 2014-07-27 14:11:14
+<?php /* Smarty version Smarty-3.1.16, created on 2014-08-04 16:09:17
          compiled from "./templates/in-out-list.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:164862366653d3899eb289d8-67309573%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0f1eb3d56de04e067d9fc4cf8c64c928ec692fb1' => 
     array (
       0 => './templates/in-out-list.tpl',
-      1 => 1406441473,
+      1 => 1407139756,
       2 => 'file',
     ),
   ),
@@ -80,6 +80,10 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['loop']['last']       = ($_sm
 </option>
     <?php endfor; endif; ?>
          </select>
+    &nbsp;&nbsp;
+    创建者：
+    <?php echo $_smarty_tpl->getSubTemplate ("user-select.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
     &nbsp;&nbsp;
     <button id="changeMonthOk">确定</button>
   </div>

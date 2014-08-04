@@ -86,8 +86,10 @@
   function changeMonthSubmit() {
     var year = $('#year').val();
     var month = $('#month').val();
+    var user = $('#user').val();
     var href = $('#changePageHref').val();
-    location.href = href + "?year=" + year + "&month=" + month;
+    location.href = href + "?year=" + year + "&month=" + month 
+        + "&user=" + user;
   }
 
   function showEditForm(id) {

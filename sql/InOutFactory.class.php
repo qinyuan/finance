@@ -5,6 +5,7 @@ abstract class InOutFactory extends SqlTableRowFactory {
   private $inOutType;
   private $month;
   private $totalYear;
+  private $filterUser = 0;
   
   function __construct($userId, $company, $inOutType) {
     $this -> userId = $userId;
@@ -37,6 +38,14 @@ abstract class InOutFactory extends SqlTableRowFactory {
   
   function setYear($year) {
     $this -> month -> setYear($year);
+  }
+  
+  function setFilterUser($userId) {
+    $this -> filterUser = $userId;
+  }
+  
+  function getFilterUser() {
+    return $this -> filterUser;
   }
   
   function getMonth() {
@@ -88,10 +97,12 @@ abstract class InOutFactory extends SqlTableRowFactory {
   
   private function getWhereClause() {
     $query = ' WHERE ';
-    $company = $this -> company;
-    if ($company) {
+    if ($company = $this -> company) {
       $query .= "user_id IN (SELECT id FROM finance_user 
               WHERE company=$company) AND ";
+    }
+    if ( $filterUser = $this -> filterUser) {
+      $query .=" user_id=$filterUser AND ";
     }
     if ($this -> totalYear) {
       $year = $this -> month -> getYear();

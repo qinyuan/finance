@@ -1,4 +1,18 @@
 <?php
+function select_users_by_company($company) {
+  $pdo = new MyPdo();
+  $query = "SELECT * FROM finance_user";
+  if ($company) {
+    $query .= " WHERE company=$company";
+  }
+  $pdo -> query($query);
+  $users = array();
+  while($row = $pdo -> fetch()){
+    $users[] = array_key_slice($row, array('id', 'name'));
+  }
+  return $users;
+}
+
 function select_companies() {
   $pdo = new MyPdo();
   $query = "SELECT * FROM finance_company";
